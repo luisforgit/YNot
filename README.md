@@ -2,14 +2,14 @@
 
 App para tomar notas (note taking).
 
-Proporciona o registo de notas, de forma simples e rápida, com as funcionalidades básicas para o efeito:
+Permite o registo de notas de forma simples e rápida, oferecendo as funcionalidades básicas expetaveis:
 
 - criar notas com a adição dum título, descrição e tags.
 - editar / alterar uma nota
 - apagar notas
 - filtrar quer pelo texto da descrição e título, quer por tags.
 
-Inclui o registo de utilizadores e sua autenticação.
+Inclui aubda o registo de novos utilizadores, a sua autenticação com email e password e ainda a recuperação de password.
 
 Tecnologias:
 
