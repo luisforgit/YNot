@@ -1,0 +1,138 @@
+//não refresca após edição
+
+
+
+
+  const handleDelete = () => {
+    Alert.alert(
+      'Apagar Nota',
+      'Tem certeza que deseja apagar esta nota?',
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        {
+          text: 'Apagar',
+          style: 'destructive',
+          onPress: async () => {
+            setLoading(true);
+            try {
+              await database
+                .collection('users')
+                .doc(auth.currentUser.uid)
+                .collection('notes')
+                .doc(note.id)
+                .delete();
+              navigation.goBack();
+            } catch (e) {
+              setSnack('Erro ao apagar');
+              setLoading(false);
+            }
+          },
+        },
+      ]
+    );
+  };
+
+  const handleEdit = () => {
+    navigation.navigate('EditNote', { note });
+  };
+
+  return (
+    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scroll}>
+        {/* Título */}
+        <Text style={styles.title}>{note.title}</Text>
+
+        {/* Conteúdo */}
+        <Text style={styles.content}>{note.content}</Text>
+
+        {/* Tags */}
+        {note.tags?.length > 0 && (
+          <View style={styles.tagRow}>
+            {note.tags.map((t) => (
+              <Chip key={t} style={styles.tag}>
+                {t}
+              </Chip>
+            ))}
+          </View>
+        )}
+
+        {/* Metadados */}
+        <View style={styles.meta}>
+          <View style={styles.metaItem}>
+            <Icon name="calendar-plus" size={16} color="#666" />
+            <Text style={styles.metaText}>
+              Criada:{' '}
+              {note.createdAt?.toDate
+                ? note.createdAt.toDate().toLocaleString()
+                : note.createdAt || '—'}
+            </Text>
+          </View>
+
+          {note.updatedAt && (
+            <View style={styles.metaItem}>
+              <Icon name="calendar-edit" size={16} color="#666" />
+              <Text style={styles.metaText}>
+                Editada:{' '}
+                {note.updatedAt.toDate
+                  ? note.updatedAt.toDate().toLocaleString()
+                  : note.updatedAt}
+              </Text>
+            </View>
+          )}
+        </View>
+      </ScrollView>
+
+      {/* Botões fixos em baixo */}
+      <View style={styles.actions}>
+        <Button
+          mode="contained"
+          icon="pencil"
+          style={styles.btn}
+          onPress={handleEdit}
+          loading={loading}
+          disabled={loading}
+        >
+          Editar
+        </Button>
+
+        <Button
+          mode="outlined"
+          icon="delete"
+          style={styles.btn}
+          onPress={handleDelete}
+          disabled={loading}
+        >
+          Apagar
+        </Button>
+      </View>
+
+      <Snackbar
+        visible={!!snack}
+        onDismiss={() => setSnack('')}
+        duration={3000}
+      >
+        {snack}
+      </Snackbar>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#fff' },
+  scroll: { padding: 24, paddingBottom: 100 },
+  title: { fontSize: 28, fontWeight: 'bold', marginBottom: 16 },
+  content: { fontSize: 16, lineHeight: 24, marginBottom: 16 },
+  tagRow: { flexDirection: 'row', flexWrap: 'wrap', marginBottom: 16 },
+  tag: { marginRight: 6, marginBottom: 6, backgroundColor: '#e0e0e0' },
+  meta: { marginTop: 12 },
+  metaItem: { flexDirection: 'row', alignItems: 'center', marginBottom: 6 },
+  metaText: { marginLeft: 6, fontSize: 14, color: '#666' },
+  actions: {
+    flexDirection: 'row',
+    padding: 16,
+    borderTopWidth: 1,
+    borderColor: '#eee',
+    backgroundColor: '#fff',
+  },
+  btn: { flex: 1, marginHorizontal: 4 },
+});

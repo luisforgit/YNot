@@ -1,13 +1,11 @@
-# YNot
-App de Notas
+# Sample Snack app
 
-App de notas, simples e rápida, com a funcionalidades básicas:
+Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
 
-- criar com adição de título, descrição e tags 
-- editar
-- apagar
-- filtrar por descrição + título e por tags 
+When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
 
-Inclui ainda o registo de utilizadores e a sua autenticação
+All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
 
-Esta App utiliza como suporte de backend para autenticação e storage a Google Firestore 
+If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+
+Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
