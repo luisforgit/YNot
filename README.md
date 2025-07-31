@@ -18,7 +18,7 @@ Tecnologias:
   
 Procuram-se contribuições para:
 
-- embeded db suport (supabase) with backend (firebase) syncronization
+- embeded db suport (supabase) with backend syncronization (firebase)
 - bulk delete
 - tag management
 - voice commands
