@@ -2,8 +2,8 @@
 
 App para tomar notas (note taking).
 
-App de registo de notas, simples e rápida, com as funcionalidades básicas para atingir os objetivos a que se propõe:
-Nat
+Proporciona o registo de notas, de forma simples e rápida, com as funcionalidades básicas para o efeito:
+
 - criar notas com a adição dum título, descrição e tags.
 - editar / alterar uma nota
 - apagar notas
@@ -14,11 +14,11 @@ Inclui o registo de utilizadores e sua autenticação.
 Tecnologias:
 
 - React Native no ambiente de desenvolvimento snack.expo.dev
-- Backend de autenticação e storage: google firebase
+- Backend de autenticação e storage com a google firebase
   
 Procuram-se contribuições para:
 
-- local db with back end syncronization
+- embeded db suport (supabase) with backend (firebase) syncronization
 - bulk delete
 - tag management
 - voice commands
