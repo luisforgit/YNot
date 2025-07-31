@@ -9,7 +9,7 @@ Permite o registo de notas de forma simples e rápida, oferecendo as funcionalid
 - apagar notas
 - filtrar quer pelo texto da descrição e título, quer por tags.
 
-Inclui aubda o registo de novos utilizadores, a sua autenticação com email e password e ainda a recuperação de password.
+Inclui ainda o registo de novos utilizadores, a sua autenticação com email e password e ainda a recuperação de password.
 
 Tecnologias:
 
