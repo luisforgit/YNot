@@ -16,7 +16,7 @@ Tecnologias:
 - React Native no ambiente de desenvolvimento snack.expo.dev
 - Backend de autenticação e storage: google firebase
   
-Aceitam-se contribuições para:
+Procuram-se contribuições para:
 
 - local db with back end syncronization
 - bulk delete
