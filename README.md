@@ -14,7 +14,7 @@ A componente de autenticação efetua o registo de novos utilizadores, a sua aut
 
 Tecnologias:
 
-- React Native no ambiente de desenvolvimento snack.expo.dev
+- React Native e bibliotecas por ele utilizadas, mas apenas nas versões compatíveis com o ambiente de desenvolvimento snack.expo.dev V53.0.0
 - Backend de autenticação e storage com a google firebase
   
 Procuram-se contribuições para (we're looking for help and contributions for these features and actions):
