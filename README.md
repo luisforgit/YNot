@@ -19,7 +19,7 @@ Tecnologias:
   
 Procuram-se contribuições para (we're looking for help and contributions for these features and actions):
 
-- embeded db suport (supabase) with backend syncronization (firebase)
+- embeded db suport (supabase, unless you're thinking in something else) with backend syncronization (firebase)
 - bulk delete
 - tag management
 - voice commands
