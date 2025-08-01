@@ -7,7 +7,7 @@ Permite o registo de notas de forma simples e rápida, oferecendo as funcionalid
 - criar notas com a adição dum título, descrição e tags.
 - editar / alterar uma nota
 - apagar notas
-- filtrar quer pelo texto da descrição e título, quer por tags.
+- filtrar quer pelo texto da descrição e título, quer por tags, quer por ambos.
 - ordenação alfabética do título, por ordem crescente ou decrescente.
 
 A componente de autenticação efetua o registo de novos utilizadores, a sua autenticação com email e password e ainda a recuperação de password.
