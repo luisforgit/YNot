@@ -23,4 +23,4 @@ Procuram-se contribuições para (we're looking for help and contributions for t
 - bulk delete
 - tag management
 - voice commands
-- sdk creation and testing
+- apk creation and testing
